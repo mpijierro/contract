@@ -21,5 +21,9 @@ echo "<br>Name: " . $product->name();
 echo "<br>Price: " . $product->price();
 
 
+// this method that does satisfy the class invariant
+$product->satisfyInvariant();
+
 // this method that does not satisfy the class invariant
-//$product->breakInvariantToExit();
+$product->notSatisfyInvariant();
+

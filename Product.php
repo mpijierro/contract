@@ -53,10 +53,24 @@ class Product
     /**
      * this method that does not satisfy the class invariant
      */
-    public function breakInvariantToExit()
+    public function notSatisfyInvariant()
     {
-        $this->price + 1;
-        $this->price = -1;
+        $this->price += 1;
+        $this->name = '';
+        $this->price = 7;
+    }
+
+    /**
+     * this method that does satisfy the class invariant
+     */
+    public function satisfyInvariant()
+    {
+        $this->price += 1;
+        $this->name = 'foo';
+        $this->price = 7;
+        $this->name = '';
+        $this->price = 9 * 2;
+        $this->name = 'foo bar';
     }
 
 }
