@@ -14,9 +14,10 @@ ContractApplication::getInstance()->init(array(
 ));
 
 
-$product = new DemoContract\Product('Ball',0);
+$product = new DemoContract\Product('Ball', 'a');
 $product->setPrice(2);
 
+echo "<br>Precio: " . $product->name();
 echo "<br>Precio: ".$product->price();
 
 /**

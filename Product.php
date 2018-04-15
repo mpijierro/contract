@@ -9,6 +9,8 @@ use PhpDeal\Annotation as Contract;
  *
  * Example with invariant
  *
+ * @Contract\Invariant("!empty($this->name)")
+ * @Contract\Invariant("is_numeric($this->price)")
  * @Contract\Invariant("$this->price >= 0")
  */
 class Product
@@ -25,7 +27,7 @@ class Product
     private $price = 0.0;
 
 
-    public function __construct(string $name, int $price)
+    public function __construct(string $name, $price)
     {
         $this->name = $name;
         $this->price = $price;
@@ -38,7 +40,12 @@ class Product
     }
 
 
-    public function price()
+    public function name(): string
+    {
+        return $this->name;
+    }
+
+    public function price(): string
     {
         return $this->price;
     }
