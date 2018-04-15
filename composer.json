@@ -1,0 +1,17 @@
+{
+    "name": "mpijierro/contract",
+    "authors": [
+        {
+            "name": "mpijierro",
+            "email": "mpijierro@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DemoContract\\": "./"
+        }
+    },
+    "require": {
+        "php-deal/framework": "^0.4.1"
+    }
+}
