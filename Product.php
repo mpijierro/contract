@@ -50,4 +50,13 @@ class Product
         return $this->price;
     }
 
+    /**
+     * this method that does not satisfy the class invariant
+     */
+    public function breakInvariantToExit()
+    {
+        $this->price + 1;
+        $this->price = -1;
+    }
+
 }
