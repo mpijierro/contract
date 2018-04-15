@@ -17,8 +17,8 @@ ContractApplication::getInstance()->init(array(
 $product = new DemoContract\Product('Ball', 0);
 $product->setPrice(2);
 
-echo "<br>Precio: " . $product->name();
-echo "<br>Precio: ".$product->price();
+echo "<br>Name: " . $product->name();
+echo "<br>Price: " . $product->price();
 
 
 // this method that does not satisfy the class invariant
